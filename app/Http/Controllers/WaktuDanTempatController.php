@@ -14,7 +14,8 @@ class WaktuDanTempatController extends Controller
      */
     public function index()
     {
-        //
+        $isiUndangan = IsiUndangan::all();
+        return view('admin.waktu_dan_tempat_create', compact('isiUndangan'));
     }
 
     /**

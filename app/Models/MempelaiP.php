@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\belongsTo;
 
 class MempelaiP extends Model
 {
@@ -12,10 +12,10 @@ class MempelaiP extends Model
     /**
      * Get the isiUndangan associated with the MempelaiP
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
      */
-    public function isiUndangan(): HasOne
+    public function isiUndangan(): belongsTo
     {
-        return $this->hasOne(IsiUndangan::class);
+        return $this->belongsTo(IsiUndangan::class);
     }
 }

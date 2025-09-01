@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\hasOne;
+use Illuminate\Database\Eloquent\Relations\belongsTo;
 
 class IsiUndangan extends Model
 {
@@ -16,68 +16,68 @@ class IsiUndangan extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function undangan(): HasOne
+    public function undangan(): belongsTo
     {
-        return $this->hasOne(Undangan::class);
+        return $this->belongsTo(Undangan::class);
     }
 
     /**
      * Get the cerita that owns the IsiUndangan
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
      */
-    public function cerita(): BelongsTo
+    public function cerita(): hasOne
     {
-        return $this->belongsTo(Cerita::class);
+        return $this->hasOne(Cerita::class);
     }
 
     /**
      * Get the galeri that owns the IsiUndangan
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
      */
-    public function galeri(): BelongsTo
+    public function galeri(): hasOne
     {
-        return $this->belongsTo(Galeri::class);
+        return $this->hasOne(Galeri::class);
     }
 
     /**
      * Get the hadiah that owns the IsiUndangan
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
      */
-    public function hadiah(): BelongsTo
+    public function hadiah(): hasOne
     {
-        return $this->belongsTo(Hadiah::class);
+        return $this->hasOne(Hadiah::class);
     }
 
     /**
      * Get the mempelaiL that owns the IsiUndangan
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
      */
-    public function mempelaiL(): BelongsTo
+    public function mempelaiL(): hasOne
     {
-        return $this->belongsTo(MempelaiL::class);
+        return $this->hasOne(MempelaiL::class);
     }
 
     /**
      * Get the MempelaiP that owns the IsiUndangan
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
      */
-    public function MempelaiP(): BelongsTo
+    public function MempelaiP(): hasOne
     {
-        return $this->belongsTo(MempelaiP::class);
+        return $this->hasOne(MempelaiP::class);
     }
 
     /**
      * Get the waktuDanTempat that owns the IsiUndangan
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasOne
      */
-    public function waktuDanTempat(): BelongsTo
+    public function waktuDanTempat(): hasOne
     {
-        return $this->belongsTo(WaktuDanTempat::class);
+        return $this->hasOne(WaktuDanTempat::class);
     }
 }

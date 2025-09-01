@@ -12,7 +12,8 @@ class UndanganController extends Controller
      */
     public function index()
     {
-        //
+        return view('undangan_create');
+
     }
 
     /**
@@ -20,7 +21,7 @@ class UndanganController extends Controller
      */
     public function create()
     {
-        return view('undangan.create');
+        return view('admin.undangan_create');
     }
 
     /**

@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\belongsTo;
 
 
 class Cerita extends Model
@@ -13,10 +13,10 @@ class Cerita extends Model
     /**
      * Get the isiUndangan associated with the Cerita
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
      */
-    public function isiUndangan(): HasOne
+    public function isiUndangan(): belongsTo
     {
-        return $this->hasOne(IsiUndangan::class);
+        return $this->belongsTo(IsiUndangan::class);
     }
 }

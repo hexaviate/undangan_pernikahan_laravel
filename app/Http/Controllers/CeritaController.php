@@ -13,7 +13,8 @@ class CeritaController extends Controller
      */
     public function index()
     {
-        //
+        $isiUndangan = IsiUndangan::all();
+        return view('admin.cerita_create', compact('isiUndangan'));
     }
 
     /**

@@ -14,7 +14,8 @@ class IsiUndanganController extends Controller
      */
     public function index()
     {
-        //
+        $undangan = Undangan::where('active', 'yes')->get();
+        return view('admin.isi_undangan_create', compact('undangan'));
     }
 
     /**
@@ -22,7 +23,7 @@ class IsiUndanganController extends Controller
      */
     public function create()
     {
-        $undangan = Undangan::all();
+        $undangan = Undangan::where('active', 'yes');
         return view('isiUndangan.create', compact('undangan'));
     }
 

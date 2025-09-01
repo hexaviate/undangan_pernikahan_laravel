@@ -15,8 +15,8 @@ class Undangan extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function isiUndangan(): BelongsTo
+    public function isiUndangan(): HasOne
     {
-        return $this->belongsTo(IsiUndangan::class);
+        return $this->hasOne(IsiUndangan::class);
     }
 }

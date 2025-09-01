@@ -13,7 +13,8 @@ class HadiahController extends Controller
      */
     public function index()
     {
-        //
+        $isiUndangan = IsiUndangan::all();
+        return view('admin.hadiah_create', compact('isiUndangan'));
     }
 
     /**
@@ -35,7 +36,7 @@ class HadiahController extends Controller
             'no_rekening2' => $request->no_rekening2,
             'nama_bank1' => $request->nama_bank1,
             'nama_bank2' => $request->nama_bank2,
-            'alamat' => $request->alamat,
+            // 'alamat' => $request->alamat,
             'isi_undangan_id' => $request->isi_undangan_id
 
         ]);

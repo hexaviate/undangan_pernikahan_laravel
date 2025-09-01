@@ -13,7 +13,8 @@ class MempelaiPController extends Controller
      */
     public function index()
     {
-        //
+        $isiUndangan = IsiUndangan::all();
+        return view('admin.mempelai_p_create', compact('isiUndangan'));
     }
 
     /**
@@ -22,7 +23,7 @@ class MempelaiPController extends Controller
     public function create()
     {
         $isiUndangan = IsiUndangan::all();
-        return view('mempelaiP.create', compact('isiUndangan'));
+        return view('admin.mempelai_p_create', compact('isiUndangan'));
     }
 
     /**
