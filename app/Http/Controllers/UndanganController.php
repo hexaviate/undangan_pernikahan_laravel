@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Undangan;
 use Illuminate\Http\Request;
 
 class UndanganController extends Controller
@@ -19,7 +20,7 @@ class UndanganController extends Controller
      */
     public function create()
     {
-        //
+        return view('undangan.create');
     }
 
     /**
@@ -27,7 +28,10 @@ class UndanganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Undangan::create([
+            'slug' => $request->slug,
+            'active' => $request->active
+        ]);
     }
 
     /**

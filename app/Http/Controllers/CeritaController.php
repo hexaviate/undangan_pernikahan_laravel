@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cerita;
+use App\Models\IsiUndangan;
 use Illuminate\Http\Request;
 
 class CeritaController extends Controller
@@ -19,7 +21,8 @@ class CeritaController extends Controller
      */
     public function create()
     {
-        //
+        $isiUndangan = IsiUndangan::all();
+        return view('cerita.create', compact('isiUndangan'));
     }
 
     /**
@@ -27,7 +30,17 @@ class CeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $videoWedding = time() . '.' . $request->video->extension();
+
+        $request->video->move(public_path('video/'), $videoWedding);
+
+        Cerita::create([
+            'cerita1' => $request->cerita1,
+            'cerita2' => $request->cerita2,
+            'cerita3' => $request->cerita3,
+            'video' => $videoWedding,
+            'isi_undangan_id' => $request->isi_undangan_id
+        ]);
     }
 
     /**

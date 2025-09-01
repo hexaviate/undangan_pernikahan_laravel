@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\IsiUndangan;
+use App\Models\MempelaiL;
 use Illuminate\Http\Request;
 
 class MempelaiLController extends Controller
@@ -19,7 +21,8 @@ class MempelaiLController extends Controller
      */
     public function create()
     {
-        //
+        $isiUndangan = IsiUndangan::all();
+        return view('mempelaiL.create', compact('isiUndangan'));
     }
 
     /**
@@ -27,7 +30,12 @@ class MempelaiLController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        MempelaiL::create([
+            'nama' => $request->nama,
+            'nama_bapak' => $request->nama_bapak,
+            'nama_ibu' => $request->nama_ibu,
+            'isi_undangan_id' => $request->isi_undangan_id
+        ]);
     }
 
     /**

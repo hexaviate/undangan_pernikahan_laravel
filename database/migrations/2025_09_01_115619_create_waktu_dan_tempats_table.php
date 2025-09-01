@@ -12,8 +12,8 @@ return new class extends Migration {
     {
         Schema::create('waktu_dan_tempats', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal_akad');
-            $table->date('tanggal_resepsi');
+            $table->dateTime('tanggal_akad');
+            $table->dateTime('tanggal_resepsi');
             $table->string('alamat_akad');
             $table->string('alamat_resepsi');
             $table->string('map_alamat_akad');

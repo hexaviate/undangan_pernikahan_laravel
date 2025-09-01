@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\IsiUndangan;
+use App\Models\Undangan;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class IsiUndanganController extends Controller
@@ -19,7 +22,8 @@ class IsiUndanganController extends Controller
      */
     public function create()
     {
-        //
+        $undangan = Undangan::all();
+        return view('isiUndangan.create', compact('undangan'));
     }
 
     /**
@@ -27,7 +31,16 @@ class IsiUndanganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $waktuPernikahan = Carbon::parse($request->waktuPernikahan);
+
+        $lagu = time() . '.' . $request->lagu->extension();
+        $request->lagu->move(public_path('foto/'), $lagu);
+
+        IsiUndangan::create([
+            "undangan_id" => $request->undangan_id,
+            "waktu_pernikahan" => $waktuPernikahan,
+            "lagu" => $lagu
+        ]);
     }
 
     /**
