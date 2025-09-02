@@ -15,7 +15,7 @@ class IsiUndanganController extends Controller
     public function index()
     {
         $undangan = Undangan::where('active', 'yes')->get();
-        return view('admin.isi_undangan_create', compact('undangan'));
+        return view('undangan', compact('undangan'));
     }
 
     /**

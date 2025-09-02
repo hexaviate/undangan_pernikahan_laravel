@@ -49,7 +49,7 @@ class UndanganController extends Controller
             'isiUndangan.waktuDanTempat'
         )->where('slug', $slug)->firstOrFail();
 
-        return view('index', compact('undangan'));
+        return view('undangan', compact('undangan'));
     }
 
     /**

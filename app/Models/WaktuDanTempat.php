@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Relations\belongsTo;
 
 class WaktuDanTempat extends Model
 {
+    protected $casts = [
+        'tanggal_akad' => 'datetime',
+        'tanggal_resepsi' => 'datetime',
+    ];
+
     protected $guarded = [];
 
     /**

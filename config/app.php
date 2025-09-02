@@ -2,6 +2,10 @@
 
 return [
 
+    'locale' => 'id',
+    'timezone' => 'Asia/Jakarta', // opsional tapi dianjurkan
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

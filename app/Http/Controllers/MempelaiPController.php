@@ -14,7 +14,7 @@ class MempelaiPController extends Controller
     public function index()
     {
         $isiUndangan = IsiUndangan::all();
-        return view('admin.mempelai_p_create', compact('isiUndangan'));
+        return view('undangan', compact('isiUndangan'));
     }
 
     /**
