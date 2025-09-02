@@ -131,7 +131,7 @@
                 </div>
 
                 <div class="text-center p-4 bg-overlay-auto rounded-5">
-                    <h2 class="font-esthetic mb-4" style="font-size: 2rem;">Wahyu &amp; ll</h2>
+                    <h2 class="font-esthetic mb-4" style="font-size: 2rem;">Wahyu &amp; Riski</h2>
                     <p class="m-0" style="font-size: 1rem;">Rabu, 15 Maret 2023</p>
                 </div>
             </div>

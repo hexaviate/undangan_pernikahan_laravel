@@ -26,6 +26,17 @@
         </select>
         <input type="submit">
     </form>
+
+    <ul>
+        <li>
+            <a href="{{ route('cerita.index') }}">Kisah Cinta</a>
+            <a href="{{ route('galeri.index') }}">Galeri</a>
+            <a href="{{ route('hadiah.index') }}">hadiah</a>
+            <a href="{{ route('mempelaiL.index') }}">Mempelai Laki</a>
+            <a href="{{ route('mempelaiP.index') }}">Mempelai Perempuan</a>
+            <a href="{{ route('waktuDanTempat.index') }}">waktu dan tempat</a>
+        </li>
+    </ul>
 </body>
 
 </html>
