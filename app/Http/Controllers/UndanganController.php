@@ -12,7 +12,7 @@ class UndanganController extends Controller
      */
     public function index()
     {
-        return view('undangan_create');
+        return view('admin.undangan_create');
 
     }
 
@@ -38,9 +38,18 @@ class UndanganController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $slug)
     {
-        //
+        $undangan = Undangan::with(
+            'isiUndangan.cerita',
+            'isiUndangan.galeri',
+            'isiUndangan.hadiah',
+            'isiUndangan.mempelaiL',
+            'isiUndangan.mempelaiP',
+            'isiUndangan.waktuDanTempat'
+        )->where('slug', $slug)->firstOrFail();
+
+        return view('index', compact('undangan'));
     }
 
     /**

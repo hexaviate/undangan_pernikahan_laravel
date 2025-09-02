@@ -67,12 +67,13 @@
         integrity="sha256-2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css"
         integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/guest.css">
+    <link rel="stylesheet" href={{ asset('css/guest.css') }}>
+    {{-- href="./css/guest.css" --}}
 
     <!-- Dependencies JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha256-5P1JGBOIxI7FBAvT/mb1fCnI5n/NhQKzNUuW7Hq0fMc=" crossorigin="anonymous"></script>
-    <script src="./js/guest.js" type="module"></script>
+    <script src="{{ asset('js/guest.js') }}" type="module"></script>
 </head>
 
 <!-- Jika tidak menggunakan komentar, hapus atribut data-key dan data-url, serta abaikan file dashboard.html. -->
@@ -95,7 +96,8 @@
 
 <!-- <html lang="id" data-bs-theme="auto"> ['auto', 'dark', 'light'] -->
 
-<body data-audio="./assets/music/pure-love-304010.mp3" data-confetti="true" data-time="2024-01-01 09:30:00">
+<body data-audio="{{ asset('assets/music/pure-love-304010.mp3') }}" data-confetti="true"
+    data-time="2024-01-01 09:30:00">
 
     <!-- Root Invitation -->
     <div class="row m-0 p-0 opacity-0" id="root">
@@ -107,19 +109,19 @@
                 <div class="d-flex position-absolute w-100 h-100">
                     <div class="position-relative overflow-hidden vw-100">
                         <div class="position-absolute h-100 w-100 slide-desktop" style="opacity: 0;">
-                            <img src="./assets/images/placeholder.webp"
+                            <img src="{{ asset('assets/images/placeholder.webp') }}"
                                 data-src="https://picsum.photos/1000/1000?random=7" fetchpriority="high"
                                 decoding="async" alt="bg" class="bg-cover-home"
                                 style="mask-image: none; opacity: 30%;">
                         </div>
                         <div class="position-absolute h-100 w-100 slide-desktop" style="opacity: 0;">
-                            <img src="./assets/images/placeholder.webp"
+                            <img src="{{ asset('assets/images/placeholder.webp') }}"
                                 data-src="https://picsum.photos/1000/1000?random=8" fetchpriority="high"
                                 decoding="async" alt="bg" class="bg-cover-home"
                                 style="mask-image: none; opacity: 30%;">
                         </div>
                         <div class="position-absolute h-100 w-100 slide-desktop" style="opacity: 0;">
-                            <img src="./assets/images/placeholder.webp"
+                            <img src="{{ asset('assets/images/placeholder.webp') }}"
                                 data-src="https://picsum.photos/1000/1000?random=9" fetchpriority="high"
                                 decoding="async" alt="bg" class="bg-cover-home"
                                 style="mask-image: none; opacity: 30%;">
@@ -142,17 +144,18 @@
 
                 <!-- Home -->
                 <section id="home" class="bg-light-dark position-relative overflow-hidden p-0 m-0">
-                    <img src="./assets/images/placeholder.webp" data-src="./assets/images/bg.webp"
-                        fetchpriority="high" decoding="async" alt="bg"
+                    <img src="{{ asset('assets/images/placeholder.webp') }}"
+                        data-src="{{ asset('assets/images/bg.webp') }}" fetchpriority="high" decoding="async"
+                        alt="bg"
                         class="position-absolute opacity-25 top-50 start-50 translate-middle bg-cover-home">
 
                     <div class="position-relative text-center bg-overlay-auto" style="background-color: unset;">
                         <h1 class="font-esthetic pt-5 pb-4 fw-medium" style="font-size: 2.25rem;">Undangan Pernikahan
                         </h1>
 
-                        <img src="./assets/images/placeholder.webp" data-src="./assets/images/bg.webp"
-                            fetchpriority="high" decoding="async" alt="bg"
-                            onclick="undangan.guest.modal(this)"
+                        <img src="{{ asset('assets/images/placeholder.webp') }}"
+                            data-src="{{ asset('assets/images/bg.webp') }}" fetchpriority="high" decoding="async"
+                            alt="bg" onclick="undangan.guest.modal(this)"
                             class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer">
 
                         <h2 class="font-esthetic my-4" style="font-size: 2.25rem;">Wahyu &amp; Riski</h2>
@@ -207,9 +210,9 @@
                             </div>
 
                             <div data-aos="fade-right" data-aos-duration="2000" class="pb-1">
-                                <img src="./assets/images/placeholder.webp" data-src="./assets/images/cowo.webp"
-                                    fetchpriority="high" decoding="async" alt="cowo"
-                                    onclick="undangan.guest.modal(this)"
+                                <img src="{{ asset('assets/images/placeholder.webp') }}"
+                                    data-src="{{ asset('assets/images/cowo.webp') }}" fetchpriority="high"
+                                    decoding="async" alt="cowo" onclick="undangan.guest.modal(this)"
                                     class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer">
                                 <h2 class="font-esthetic m-0" style="font-size: 2.125rem;">Nama Wahyu Siapa</h2>
                                 <p class="mt-3 mb-1" style="font-size: 1.25rem;">Putra ke-1</p>
@@ -243,9 +246,9 @@
                             </div>
 
                             <div data-aos="fade-left" data-aos-duration="2000" class="pb-1">
-                                <img src="./assets/images/placeholder.webp" data-src="./assets/images/cewe.webp"
-                                    fetchpriority="high" decoding="async" alt="cewe"
-                                    onclick="undangan.guest.modal(this)"
+                                <img src="{{ asset('assets/images/placeholder.webp') }}"
+                                    data-src="{{ asset('assets/images/cewe.webp') }}" fetchpriority="high"
+                                    decoding="async" alt="cewe" onclick="undangan.guest.modal(this)"
                                     class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer">
                                 <h2 class="font-esthetic m-0" style="font-size: 2.125rem;">Nama Riski Siapa</h2>
                                 <p class="mt-3 mb-1" style="font-size: 1.25rem;">Putri ke-2</p>
@@ -310,7 +313,7 @@
                             <!-- If you don't want to use the video, remove the entire tag with id="video-love-story" below. -->
 
                             <div id="video-love-stroy" class="position-relative rounded-4 mb-1 pb-0"
-                                data-src="./assets/video/265501_tiny.mp4"
+                                data-src="{{ asset('assets/video/265501_tiny.mp4') }}"
                                 data-vid-class="w-100 rounded-4 shadow-sm m-0 p-0">
                                 <div class="position-absolute d-flex flex-column justify-content-center align-items-center top-50 start-50 translate-middle w-100 h-100 bg-overlay-auto rounded-4 z-3"
                                     id="video-love-stroy-loading">
@@ -531,19 +534,19 @@
 
                                 <div class="carousel-inner rounded-4">
                                     <div class="carousel-item active">
-                                        <img src="./assets/images/placeholder.webp"
+                                        <img src="{{ asset('assets/images/placeholder.webp') }}"
                                             data-src="https://picsum.photos/1280/720?random=1" fetchpriority="high"
                                             decoding="async" alt="image 1" class="d-block img-fluid cursor-pointer"
                                             onclick="undangan.guest.modal(this)">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/images/placeholder.webp"
+                                        <img src="{{ asset('assets/images/placeholder.webp') }}"
                                             data-src="https://picsum.photos/1280/720?random=2" fetchpriority="high"
                                             decoding="async" alt="image 2" class="d-block img-fluid cursor-pointer"
                                             onclick="undangan.guest.modal(this)">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/images/placeholder.webp"
+                                        <img src="{{ asset('assets/images/placeholder.webp') }}"
                                             data-src="https://picsum.photos/1280/720?random=3" fetchpriority="high"
                                             decoding="async" alt="image 3" class="d-block img-fluid cursor-pointer"
                                             onclick="undangan.guest.modal(this)">
@@ -576,19 +579,19 @@
 
                                 <div class="carousel-inner rounded-4">
                                     <div class="carousel-item active">
-                                        <img src="./assets/images/placeholder.webp"
+                                        <img src="{{ asset('assets/images/placeholder.webp') }}"
                                             data-src="https://picsum.photos/1280/720?random=4" fetchpriority="high"
                                             decoding="async" alt="image 4" class="d-block img-fluid cursor-pointer"
                                             onclick="undangan.guest.modal(this)">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/images/placeholder.webp"
+                                        <img src="{{ asset('assets/images/placeholder.webp') }}"
                                             data-src="https://picsum.photos/1280/720?random=5" fetchpriority="high"
                                             decoding="async" alt="image 5" class="d-block img-fluid cursor-pointer"
                                             onclick="undangan.guest.modal(this)">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/images/placeholder.webp"
+                                        <img src="{{ asset('assets/images/placeholder.webp') }}"
                                             data-src="https://picsum.photos/1280/720?random=6" fetchpriority="high"
                                             decoding="async" alt="image 6" class="d-block img-fluid cursor-pointer"
                                             onclick="undangan.guest.modal(this)">
@@ -674,9 +677,9 @@
                             <div class="collapse" id="collapseQris">
                                 <hr class="my-2 py-1">
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <img src="./assets/images/placeholder.webp" data-src="./assets/images/donate.png"
-                                        fetchpriority="high" decoding="async" alt="donate"
-                                        class="img-fluid rounded-3 mx-auto bg-white">
+                                    <img src="{{ asset('assets/images/placeholder.webp') }}"
+                                        data-src="{{ asset('assets/images/donate.png') }}" fetchpriority="high"
+                                        decoding="async" alt="donate" class="img-fluid rounded-3 mx-auto bg-white">
                                 </div>
                             </div>
                         </div>
@@ -875,8 +878,9 @@
             <div class="d-flex flex-column text-center">
                 <h2 class="font-esthetic mb-4" style="font-size: 2.25rem;">The Wedding Of</h2>
 
-                <img src="./assets/images/placeholder.webp" data-src="./assets/images/bg.webp" fetchpriority="high"
-                    decoding="async" alt="background"
+                <img src="{{ asset('assets/images/placeholder.webp') }}"
+                    data-src="{{ asset('assets/images/bg.webp') }}" fetchpriority="high" decoding="async"
+                    alt="background"
                     class="img-center-crop rounded-circle border border-3 border-light shadow mb-4 mx-auto">
 
                 <h2 class="font-esthetic mb-4" style="font-size: 2.25rem;">Wahyu &amp; Riski</h2>
@@ -910,9 +914,10 @@
     <div class="loading-page bg-white-black" id="loading" style="opacity: 1;">
         <div class="d-flex justify-content-center align-items-center vh-100 overflow-y-auto">
             <div class="d-flex flex-column width-loading text-center">
-                <img src="./assets/images/placeholder.webp" data-src="./assets/images/icon-192x192.png"
-                    data-fetch-img="high" class="img-fluid mb-3 mx-auto object-fit-cover opacity-0"
-                    fetchpriority="high" decoding="async" alt="icon" style="width: 3.5rem; height: 3.5rem;">
+                <img src="{{ asset('assets/images/placeholder.webp') }}"
+                    data-src="{{ asset('assets/images/icon-192x192.png') }}" data-fetch-img="high"
+                    class="img-fluid mb-3 mx-auto object-fit-cover opacity-0" fetchpriority="high" decoding="async"
+                    alt="icon" style="width: 3.5rem; height: 3.5rem;">
                 <div class="progress" role="progressbar" style="height: 0.5rem;" aria-label="progress bar">
                     <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
                 </div>
@@ -938,7 +943,7 @@
                 <div class="modal-body p-0">
                     <div class="d-flex position-absolute top-0 end-0">
                         <a class="btn d-flex justify-content-center align-items-center bg-overlay-auto p-2 m-1 rounded-circle border shadow-sm z-1"
-                            role="button" target="_blank" href="./assets/images/placeholder.webp"
+                            role="button" target="_blank" href="{{ asset('assets/images/placeholder.webp') }}"
                             id="button-modal-click">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -954,8 +959,9 @@
                         </button>
                     </div>
 
-                    <img src="./assets/images/placeholder.webp" class="img-fluid w-100 rounded-4 cursor-pointer"
-                        fetchpriority="high" decoding="async" alt="image" id="show-modal-image">
+                    <img src="{{ asset('assets/images/placeholder.webp') }}"
+                        class="img-fluid w-100 rounded-4 cursor-pointer" fetchpriority="high" decoding="async"
+                        alt="image" id="show-modal-image">
                 </div>
             </div>
         </div>

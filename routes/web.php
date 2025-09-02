@@ -32,3 +32,5 @@ Route::resource('mempelaiL', MempelaiLController::class);
 Route::resource('mempelaiP', MempelaiPController::class);
 Route::resource('undangan', UndanganController::class);
 Route::resource('waktuDanTempat', WaktuDanTempatController::class);
+
+Route::get('/undangan/{slug}', [UndanganController::class, 'show']);
