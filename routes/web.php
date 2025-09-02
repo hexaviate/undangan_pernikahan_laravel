@@ -24,16 +24,16 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::prefix('admin/pernikahan')->group(function () {
-    Route::resource('cerita', CeritaController::class);
-    Route::resource('galeri', GaleriController::class);
-    Route::resource('hadiah', HadiahController::class);
-    Route::resource('isiUndangan', IsiUndanganController::class);
-    Route::resource('mempelaiL', MempelaiLController::class);
-    Route::resource('mempelaiP', MempelaiPController::class);
-    Route::resource('undangan', UndanganController::class);
-    Route::resource('waktuDanTempat', WaktuDanTempatController::class);
-});
+// Route::prefix('admin/pernikahan')->group(function () {
+Route::resource('cerita', CeritaController::class);
+Route::resource('galeri', GaleriController::class);
+Route::resource('hadiah', HadiahController::class);
+Route::resource('isiUndangan', IsiUndanganController::class);
+Route::resource('mempelaiL', MempelaiLController::class);
+Route::resource('mempelaiP', MempelaiPController::class);
+Route::resource('undangan', UndanganController::class);
+Route::resource('waktuDanTempat', WaktuDanTempatController::class);
+// });
 
 
 Route::get('/undangan/{slug}', [UndanganController::class, 'show']);
