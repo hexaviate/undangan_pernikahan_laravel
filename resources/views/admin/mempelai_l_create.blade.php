@@ -11,8 +11,16 @@
     <form action="{{ route('mempelaiL.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="text" name="nama" placeholder="nama">
+<<<<<<< HEAD
         <input type="text" name="nama_bapak" placeholder="nama_bapak">
         <input type="text" name="nama_ibu" placeholder="nama_ibu">
+=======
+        <input type="text" name="nama_panggilan" placeholder="nama_panggilan">
+        <input type="text" name="nama_bapak" placeholder="nama_bapak">
+        <input type="text" name="nama_ibu" placeholder="nama_ibu">
+        <input type="text" name="alamat" placeholder="alamat">
+        <input type="file" name="foto" placeholder="Masukkan foto">
+>>>>>>> dfaa9745020f06af0d4a1b2b976363d036e4b76c
         <select name="isi_undangan_id" id="">
             @foreach ($isiUndangan as $item)
                 <option selected disabled>Pilih isiUndangan</option>

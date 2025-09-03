@@ -29,9 +29,15 @@ class UndanganController extends Controller
      */
     public function store(Request $request)
     {
+        $cover = time() . '.' . $request->cover->extension();
+        $request->cover->move(public_path('foto_mempelai/'), $cover);
+
         Undangan::create([
             'slug' => $request->slug,
-            'active' => $request->active
+            'active' => $request->active,
+            'nama_keluarga1' => $request->nama_keluarga1,
+            'nama_keluarga2' => $request->nama_keluarga2,
+            'cover' => $cover,
         ]);
     }
 
@@ -49,7 +55,7 @@ class UndanganController extends Controller
             'isiUndangan.waktuDanTempat'
         )->where('slug', $slug)->firstOrFail();
 
-        return view('undangan', compact('undangan'));
+        return view('index', compact('undangan'));
     }
 
     /**

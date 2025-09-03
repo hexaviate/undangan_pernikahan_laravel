@@ -130,7 +130,7 @@
                 </div>
 
                 <div class="text-center p-4 bg-overlay-auto rounded-5">
-                    <h2 class="font-esthetic mb-4" style="font-size: 2rem;">Wahyu &amp; Riski</h2>
+                    <h2 class="font-esthetic mb-4" style="font-size: 2rem;">Aziz &amp; Riski</h2>
                     <p class="m-0" style="font-size: 1rem;">Rabu, 15 Maret 2023</p>
                 </div>
             </div>
@@ -878,12 +878,12 @@
             <div class="d-flex flex-column text-center">
                 <h2 class="font-esthetic mb-4" style="font-size: 2.25rem;">The Wedding Of</h2>
 
-                <img src="{{ asset(path: 'assets/images/placeholder.webp') }}"
+                <img src="{{ asset('assets/images/placeholder.webp') }}"
                     data-src="{{ asset('assets/images/bg.webp') }}" fetchpriority="high" decoding="async"
                     alt="background"
                     class="img-center-crop rounded-circle border border-3 border-light shadow mb-4 mx-auto">
 
-                <h2 class="font-esthetic mb-4" style="font-size: 2.25rem;"> &amp; Riski</h2>
+                <h2 class="font-esthetic mb-4" style="font-size: 2.25rem;">Wahyu &amp; Riski</h2>
                 <div id="guest-name" data-message="Kepada Yth Bapak/Ibu/Saudara/i"></div>
 
                 <button type="button" class="btn btn-light shadow rounded-4 mt-3 mx-auto"
