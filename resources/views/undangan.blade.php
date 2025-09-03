@@ -97,7 +97,7 @@
 
 <!-- <html lang="id" data-bs-theme="auto"> ['auto', 'dark', 'light'] -->
 
-<body data-audio="{{ asset('assets/music/pure-love-304010.mp3') }}" data-confetti="true"
+<body data-audio="{{ asset('foto/' . $undangan->isiUndangan->lagu) }}" data-confetti="true"
     data-time="2024-01-01 09:30:00">
 
     <!-- Root Invitation -->
@@ -472,12 +472,12 @@
             <div class="overflow-x-hidden">
                 <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
                     <h2 class="font-esthetic m-0 py-2" style="font-size: 2rem;">Akad</h2>
-                    <p style="font-size: 0.95rem;">Pukul 10.00 WIB - Selesai</p>
+                    <p style="font-size: 0.95rem;">Pukul {{ $undangan->isiUndangan->waktuDanTempat->tanggal_akad->translatedFormat('H.i') }} WIB - Selesai</p>
                 </div>
 
                 <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
                     <h2 class="font-esthetic m-0 py-2" style="font-size: 2rem;">Resepsi</h2>
-                    <p style="font-size: 0.95rem;">Pukul 13.00 WIB - Selesai</p>
+                    <p style="font-size: 0.95rem;">Pukul {{ $undangan->isiUndangan->waktuDanTempat->tanggal_resepsi->translatedFormat('H.i') }} WIB - Selesai</p>
                 </div>
             </div>
 
@@ -493,7 +493,7 @@
             </div>
 
             <div class="py-2" data-aos="fade-down" data-aos-duration="1500">
-                <a href="https://goo.gl/maps/ALZR6FJZU3kxVwN86" target="_blank"
+                <a href="{{ $undangan->isiUndangan->waktuDanTempat->alamat_resepsi }}" target="_blank"
                     class="btn btn-outline-auto btn-sm rounded-pill shadow mb-2 px-3"><i
                         class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps</a>
                 <small class="d-block my-1">RT 10 RW 02, Desa Pajerukan, Kec. Kalibagor, Kab. Banyumas,
